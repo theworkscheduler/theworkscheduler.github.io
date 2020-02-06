@@ -8,14 +8,16 @@
   <script>
     
 <form action="/action_page.php">
-Last name: <input type="text" name="LastName" value="Mouse"><br>
+Last name: <input type="text" id="LastName" value="Mouse"><br>
 <input type="submit" value="Submit">
 </form>
+    
+var lastname = document.getElementByName("LastName").value;
     
 // Check browser support
 if (typeof(Storage) !== "undefined") {
   // Store
-  localStorage.setItem("lastname", "bitchas nugga");
+  localStorage.setItem("lastname", Lastname);
   // Retrieve
   document.getElementById("result").innerHTML = localStorage.getItem("lastname");
 } else {
