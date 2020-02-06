@@ -3,7 +3,7 @@
   
   
  
-  <center><h1><div id="result"></div> hi </h1></center>
+  <center><h1><div id="result"></div> his </h1></center>
   
   <script>
     
@@ -14,15 +14,7 @@
     
 var lastname = document.getElementById("LastName").value;
     
-// Check browser support
-if (typeof(Storage) !== "undefined") {
-  // Store
-  localStorage.setItem("lastname", lastname);
-  // Retrieve
-  document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-} else {
-  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-}
+
 </script>
   
   
