@@ -3,18 +3,25 @@
   
   
  
-  <center><h1> hi </h1></center>
+  <center><h1><div id="result"></div> hi </h1></center>
+    
+    
+<input type="text" id="LastName" value="Mouse"><br>
+<input type="submit" value="Submit">
   
   <script>
     
-
-<input type="text" id="LastName" value="Mouse"><br>
-<input type="submit" value="Submit">
-
-    
 var lastname = document.getElementById("LastName").value;
     
-
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("lastname", lastname);
+  // Retrieve
+  document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
 </script>
   
   
