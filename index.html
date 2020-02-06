@@ -17,7 +17,7 @@ var lastname = document.getElementByName("LastName").value;
 // Check browser support
 if (typeof(Storage) !== "undefined") {
   // Store
-  localStorage.setItem("lastname", LastName);
+  localStorage.setItem("lastname", lastname);
   // Retrieve
   document.getElementById("result").innerHTML = localStorage.getItem("lastname");
 } else {
